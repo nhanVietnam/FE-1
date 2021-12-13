@@ -1,0 +1,55 @@
+.header{
+    width: 100%;
+        .top-bar{
+            padding: 10px 0;
+            display: flex;
+            align-items: center;
+            color: $gray-light;
+
+            .contact{
+                margin-left: auto;
+            }
+
+            .info{
+                display: flex;
+                gap: 0 32px;
+            }
+
+            .icon{
+                display: inline;
+                margin-right: 8px;
+            }
+
+            .des{
+                font-weight: 300;
+                font-size: 1,3rem;
+            }
+        }
+
+        .nav-bar {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 20px 0;
+
+            .menu {
+                list-style: none;
+                display: flex;
+                align-items: center;
+                gap: 0 50px;
+
+                &-item{
+
+                    .link{
+                        color: $text-black;
+                        font-weight: 600;
+                        font-size: 1.5rem;
+
+                        &:hover{
+                            color: $primaryColor;
+                        }
+                    }
+                }
+            }
+        }
+}

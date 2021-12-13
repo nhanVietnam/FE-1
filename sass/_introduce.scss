@@ -1,0 +1,57 @@
+.introduce{
+    padding: 80px 10px;
+    padding-bottom: 50px;
+    display: flex;
+    text-align: justify;
+    align-items: center;
+
+    &-item{
+        width: 50%;
+        margin: auto 0;
+        
+        &:nth-child(2){
+            padding-left: 120px;
+        }
+    }
+
+    &-des{
+        display: flex;
+        flex-direction: column;
+        gap: 40px;
+    }
+
+    &-title{
+        color: $secondaryColor;
+        font-weight: 800;
+        font-size: 3.2rem;
+    }
+
+    &-brief{
+        font-size: 2.4rem;
+    }
+
+    &-content p {
+        font-size: 1.6rem;
+        line-height: 1.6;
+        font-weight: 300;
+        text-align: left;
+        margin-bottom: 10px;
+    }
+
+    &-action span{
+        display: inline;
+        border: 1px none $primaryColor;
+        background-color: $primaryColor;
+        padding: 10px 20px;
+        font-size: 1.6rem;
+        color: white;
+        font-weight: 400;
+        border-radius: 10px;
+        width: auto;
+    }
+    
+    &-image{
+        width: 644px;
+    }
+
+}

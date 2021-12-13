@@ -1,0 +1,43 @@
+.chart{
+    background-image: url("../assets/images/bgchart.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+
+    .container{
+        display: flex;
+        align-items: center;
+        height: 440px;
+    }
+
+    &-item{
+        width: calc(100%/4);
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+
+    }
+
+    &-number{
+        width: 150px;
+        height: 150px;
+        border-radius: 50%;
+        background-color: $secondaryColor;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin-bottom: 20px;
+
+        span{
+            color: white;
+            font-size: 4.6rem;
+            font-weight: 800;
+        }
+    }
+
+    &-text{
+        color: white;
+        font-size: 2rem;
+        font-weight: 700;
+    }
+}
