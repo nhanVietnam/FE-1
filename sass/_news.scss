@@ -4,13 +4,21 @@
     &-header{
         display: flex;
         justify-content: space-between;
+        margin-bottom: 50px;
+
+        a{
+            color: $text-black-light;
+            transition: 0.5s;
+            &:hover{
+                color: $primaryColor
+            }
+        }
     }
 
     &-title{
         font-size: 3.2rem;
         font-weight: 800;
         color: $secondaryColor;
-        margin-bottom: 80px;
     }
 
     &-img-main{
@@ -81,6 +89,11 @@
             p{
                 font-weight: 400;
                 line-height: 1.6;
+                display: -webkit-box;
+                -webkit-line-clamp: 3;
+                -webkit-box-orient: vertical;
+                overflow: hidden;
+                text-overflow: ellipsis;
             }
         }
     }
@@ -104,6 +117,16 @@
             align-items: center;
             padding-left: 0;
             padding-top: 30px;
+        }
+    }
+}
+
+@media screen and (max-width:730px) {
+    .news{
+        &-right{
+            &-img{
+                width: 40%;
+            }
         }
     }
 }

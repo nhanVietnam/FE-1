@@ -1,5 +1,6 @@
 .benefit{
-    padding: 50px 10px;
+    padding-top: 50px;
+    padding-bottom: 50px;
 
     &-title{
         font-size: 3rem;
@@ -62,6 +63,26 @@
     .benefit{
         &-text{
             width: 100%;
+        }
+    }
+}
+
+@media screen and (max-width: 730px) {
+    .benefit{
+        &-item{
+            flex-direction: column;
+            align-items: center;
+        }
+
+        &-box{
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+        }
+
+        &-img img{
+            width: 100px;
+            margin-bottom: 30px;
         }
     }
 }

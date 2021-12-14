@@ -3,7 +3,7 @@
     background-size: cover;
     background-repeat: no-repeat;
     
-    .container {
+    &-box {
         padding: 70px 160px;
         display: flex;
         align-items: center;
@@ -37,6 +37,13 @@
             color: $primaryColor;
             font-size: 1.8rem;
             font-weight: 600;
+            transition: 0.5s;
+
+            &:hover{
+                background-color: $primaryColor;
+                color: white;
+                text-align: center;
+            }
         }
 
         &-img{
@@ -48,19 +55,24 @@
 
 @media screen and (max-width: 1199px) {
     .price{
-        .container{
+        &-box{
             flex-direction: column;
             align-items: center;
         }
 
         &-left{
+            width: max-content;
             h3{
-                font-size: 2.0rem;
+                font-size: 1.6rem;
             }
         }
 
         &-right{
             padding-top: 40px;
+            a{
+                width: max-content;
+                font-size: 1.6;
+            }
         }
     }
 }

@@ -30,3 +30,53 @@ hr{
         padding: 0 40px;
     }
 }
+
+/* width */
+::-webkit-scrollbar {
+    width: 5px;
+  }
+  
+  /* Track */
+  ::-webkit-scrollbar-track {
+    background: #f1f1f1; 
+  }
+   
+  /* Handle */
+  ::-webkit-scrollbar-thumb {
+    background: #888; 
+  }
+  
+  /* Handle on hover */
+  ::-webkit-scrollbar-thumb:hover {
+    background: #555; 
+  }
+
+.call{
+    display: none;
+    position: fixed;
+    bottom: 30px;
+    right: 30px;
+    padding: 18px;
+    border: 1px solid $primaryColor;
+    border-radius: 50%;
+    background-color: $primaryColor;
+    font-size: 2.4rem;
+    color: white;
+    transition: 0.5s;
+
+    i{
+        width: 100%;
+        height: 100%;
+    }
+
+    &:hover{
+        color: $primaryColor;
+        background-color: white;
+    }
+}
+
+@media screen and (max-width: 1200px) {
+    .call{
+        display: block;
+    }
+}

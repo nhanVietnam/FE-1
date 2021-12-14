@@ -1,5 +1,5 @@
 .introduce{
-    padding: 80px 10px;
+    padding-top: 80px;
     padding-bottom: 50px;
     display: flex;
     text-align: justify;
@@ -41,7 +41,7 @@
 
     &-action span{
         display: inline;
-        border: 1px none $primaryColor;
+        border: 1px solid white;
         background-color: $primaryColor;
         padding: 10px 20px;
         font-size: 1.6rem;
@@ -49,6 +49,13 @@
         font-weight: 400;
         border-radius: 10px;
         width: auto;
+        transition: 0.5s;
+
+        &:hover{
+            background-color: white;
+            color: $primaryColor;
+            border-color: $primaryColor;
+        }
     }
     
     &-image{
@@ -71,6 +78,21 @@
             &:nth-child(2){
                 display: none;
             }
+        }
+
+        &-des{
+            gap: 20px;
+        }
+    }
+
+}
+
+@media screen and (max-width: 730px) {
+
+    .introduce{
+        &-brief{
+            white-space: normal;
+            line-height: 1.6;
         }
     }
 
