@@ -3,20 +3,16 @@
     padding-bottom: 50px;
     text-align: justify;
     background-color: $gray-second-light;
-
     & .container{
         display: flex;
     }
-
     &-item{
         width: 50%;
         margin: auto 0;
-        
         &:nth-child(2){
             padding-left: 120px;
         }
     }
-    
     &-subitem{
         width: 100%;
         display: flex;
@@ -26,22 +22,35 @@
         background-color: white;
         padding: 20px 0;
         border-radius: 12px;
+        transition: 0.5s;
 
         &:hover{
             background-color: $primaryColor;
             color: white;
-        }
+            transform: translateY(-10px);
 
+            img{
+                transform: rotate(30deg);
+                
+            }
+
+            span{
+                background-color: $white;
+                
+                i{
+                    color: $primaryColor;
+                }
+            }
+        }
         img{
             width: 84px;
             height: 84px;
+            transition: transform 1s;
         }
-
         p{
             font-size: 1.8rem;
             margin: 30px 0 20px;
         }
-
         span{
             width: 30px;
             height: 30px;
@@ -52,41 +61,36 @@
             align-items: center;
             justify-content: center;
             background-color: $primaryColor;
+            transition: color 0.5s;
         }
     }
-
     &-box{
         display: grid;
         grid-template-columns: 1fr 1fr;
         justify-items: center;
         grid-gap: 20px 10px;
     }
-
     &-des{
         display: flex;
         flex-direction: column;
         gap: 40px;
     }
-
     &-title{
         color: $secondaryColor;
         font-weight: 800;
         font-size: 3.2rem;
     }
-
     &-brief{
         font-size: 1.8rem;
         font-weight: 700;
     }
-
     &-content p {
         font-size: 1.6rem;
         line-height: 1.6;
         font-weight: 300;
-        text-align: left;
+        text-align: justify;
         margin-bottom: 10px;
     }
-
     &-action span{
         display: inline;
         border: 1px none $primaryColor;
@@ -98,9 +102,25 @@
         border-radius: 10px;
         width: auto;
     }
-    
     &-image{
         width: 644px;
     }
+}
 
+@media screen and (max-width: 1199px) {
+    .service{
+        & .container{
+            flex-direction: column;
+            align-items: center;
+        }
+
+        &-item{
+            width: 100%;
+
+            &:nth-child(2){
+                padding-left: 0;
+                padding-top: 50px;
+            }
+        }
+    }
 }

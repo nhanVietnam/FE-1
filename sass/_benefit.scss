@@ -14,6 +14,7 @@
         font-size: 1.6rem;
         line-height: 1.6;
         font-weight: 300;
+        text-align: justify;
         padding: 24px 0 30px;
         width: 50%;
     }
@@ -53,6 +54,14 @@
             font-size: 1.6rem;
             font-weight: 400;
             line-height: 1.6;
+        }
+    }
+}
+
+@media screen and (max-width: 1199px) {
+    .benefit{
+        &-text{
+            width: 100%;
         }
     }
 }

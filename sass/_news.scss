@@ -38,6 +38,7 @@
         p {
             font-weight: 400;
             line-height: 1.6;
+            color: $text-black-light;
         }
     }
 
@@ -86,5 +87,23 @@
 
     &-box{
         display: flex;
+    }
+}
+
+@media screen and (max-width: 1199px) {
+    .news{
+        &-box{
+            flex-direction: column;
+        }
+
+        &-img-main{
+            width: 100%;
+        }
+
+        &-right{
+            align-items: center;
+            padding-left: 0;
+            padding-top: 30px;
+        }
     }
 }

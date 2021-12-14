@@ -28,13 +28,14 @@
 
     &-brief{
         font-size: 2.4rem;
+        white-space: nowrap;
     }
 
     &-content p {
         font-size: 1.6rem;
         line-height: 1.6;
         font-weight: 300;
-        text-align: left;
+        text-align: justify;
         margin-bottom: 10px;
     }
 
@@ -51,7 +52,26 @@
     }
     
     &-image{
+
+        img{
         width: 644px;
+        box-shadow: 4px 4px 0px 3px $primaryColor;
+        border-radius: 10px;
+        }
+    }
+
+}
+
+@media screen and (max-width: 1199px) {
+    .introduce{
+        &-item{
+            width: 100%;
+            margin: auto 0;
+        
+            &:nth-child(2){
+                display: none;
+            }
+        }
     }
 
 }

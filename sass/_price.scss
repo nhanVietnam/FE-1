@@ -45,3 +45,22 @@
         }
     }
 }
+
+@media screen and (max-width: 1199px) {
+    .price{
+        .container{
+            flex-direction: column;
+            align-items: center;
+        }
+
+        &-left{
+            h3{
+                font-size: 2.0rem;
+            }
+        }
+
+        &-right{
+            padding-top: 40px;
+        }
+    }
+}

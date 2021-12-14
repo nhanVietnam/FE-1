@@ -20,3 +20,13 @@ body{
     padding: 0 10px;
     margin: 0 auto;
 }
+
+hr{
+    border-top: .1px solid $gray-second-light;
+}
+
+@media screen and (max-width: 1199px) {
+    .container{
+        padding: 0 40px;
+    }
+}

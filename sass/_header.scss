@@ -4,15 +4,21 @@
             padding: 10px 0;
             display: flex;
             align-items: center;
-            color: $gray-light;
+            color: $gray;
 
             .contact{
+                align-items: center;
+                display: flex;
                 margin-left: auto;
             }
 
             .info{
                 display: flex;
                 gap: 0 32px;
+                &-item{
+                    display: flex;
+                    align-items: center;
+                }
             }
 
             .icon{
@@ -22,7 +28,7 @@
 
             .des{
                 font-weight: 300;
-                font-size: 1,3rem;
+                font-size: 1.2rem;
             }
         }
 
@@ -43,7 +49,7 @@
                     .link{
                         color: $text-black;
                         font-weight: 600;
-                        font-size: 1.5rem;
+                        font-size: 1.2rem;
 
                         &:hover{
                             color: $primaryColor;
@@ -53,3 +59,17 @@
             }
         }
 }
+
+@media screen and (max-width: 1200px) {
+    .header{
+        .top-bar{
+            display: none;
+        }
+
+        .nav-bar{
+            display: none;
+        }
+    }
+
+}
+  
