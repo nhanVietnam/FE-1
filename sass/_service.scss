@@ -119,22 +119,35 @@
         &-item{
             width: 100%;
             &:nth-child(2){
-                width: 50%;
+                width: 100%;
                 padding-left: 0;
                 padding-top: 50px;
             }
         }
         &-box{
             padding-top: 20px;
-            grid-template-columns: 1fr;
+            grid-template-columns: 1fr 1fr;
+        }
+
+        &-subitem{
+            width: 100%;
         }
     }
 }
 
-@media screen and (max-width:730px) {
+@media screen and (max-width:930px) {
     .service{
         &-item{
-            width: 100%;
+            &:nth-child(2){
+                width: 100%;
+                padding-left: 0;
+                padding-top: 50px;
+            }
+        }
+
+        &-box{
+            padding-top: 20px;
+            grid-template-columns: 1fr;
         }
     }
     

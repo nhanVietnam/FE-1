@@ -1,44 +1,24 @@
 .banner{
     background-size: cover;
-    
     .hero{
-
         &-image{
+            width: 100%;
             object-fit: cover;
             height: 500px;
         }
     }
 
     .subbanner{
-        margin-top: -76px;
+        margin-top: -75px;
         display: flex;
         align-items: center;
         position: relative;
-        margin-bottom: 100px;
-        display: none;
-
-        &-button{
-
-            position: absolute;
-            // position: absolute;
-            // width: 30px;
-            // height: 30px;
-            // border: 1px;
-            // top: 0;
-            // left: -30;
-            // background-color: $primaryColor;
-            // border-radius: 16px;
-
-            // &:last-child{
-            //     right: 30;
-            // }
-        }
 
         &-list{
             list-style: none;
             display: flex;
             align-items: center;
-            gap: 0 12px;
+
             position: absolute;
         }
 
@@ -74,6 +54,118 @@
             border-radius: 12px;
             padding: 8px 16px;
             
+        }
+    }
+}
+
+@media screen and (max-width: 1440px) {
+    .subbanner{
+        width: 90%;
+    }
+}
+
+@media screen and (max-width:950px) {
+    .banner{
+        .subbanner{
+            &-item{
+                text-align: center;
+            }
+
+            &-image{
+                width: 400px;
+                text-align: center;
+                margin: 0 auto;
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 800px) {
+    .subbanner{
+        width: 90%;
+    }
+    .swiper{
+        &-button-prev{
+            left: -10px;
+        }
+        &-button-next{
+            right: -10px;
+        }
+    }
+
+}
+
+@media screen and (max-width:620px) {
+    .banner{
+        .subbanner{
+            width: 80%;
+            &-item{
+                text-align: center;
+            }
+
+            &-image{
+                width: 300px;
+                text-align: center;
+                margin: 0 auto;
+            }
+        }
+    }
+}
+
+.swiper{
+    width: 100%;
+    height: 240px;
+    padding: 0 15px;
+
+    &-wrapper{
+        align-items: center;
+        z-index: 1;
+        position: relative;
+    }
+
+    &-button-prev{
+        position: absolute;
+        left: -20px;
+        top: unset;
+        transition: 0.5s;
+        &::after{
+            width: 18px;
+            height: 18px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-size: 1.8rem;
+            color: white;
+            border: 1px solid $primaryColor;
+            background-color: $primaryColor;
+            border-radius: 50%;
+            padding: 18px;
+        }
+        &:hover{
+            transform: scale(1.2);
+        }
+    }
+
+    &-button-next{
+        position: absolute;
+        right: -20px;
+        top: unset;
+        transition: 0.5s;
+        &::after{
+            width: 18px;
+            height: 18px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-size: 1.8rem;
+            color: white;
+            border: 1px solid $primaryColor;
+            background-color: $primaryColor;
+            border-radius: 50%;
+            padding: 18px;
+        }
+        &:hover{
+            transform: scale(1.2);
         }
     }
 }

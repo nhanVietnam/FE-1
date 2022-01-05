@@ -44,16 +44,42 @@
                 align-items: center;
                 gap: 0 50px;
                 &-item{
+                    position: relative;
                     .link{
                         color: $text-black;
                         font-weight: 600;
                         font-size: 1.6rem;
                         color: $text-black-light;
 
+                        i{
+                            font-size: 12px;
+                        }
+
                         &:hover{
                             color: $primaryColor;
                         }
                     }
+                }
+
+                &-dropdown{
+                    width: 200px;
+                    position: absolute;
+                    display: flex;
+                    flex-direction: column;
+                    background: white;
+                    padding: 10px 20px;
+                    font-size: 1.4rem;
+                    line-height: 1.8;
+                    box-shadow: 3px 4px 5px 0 $text-black-light;
+                    left: -50%;
+                    top: 20px;
+                    a{
+                        color: $text-black-light;
+                        transition: 1s;
+                        &:hover{
+                            color: $primaryColor;
+                        }
+                    } 
                 }
             }
         }
