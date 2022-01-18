@@ -59,12 +59,18 @@
                             color: $primaryColor;
                         }
                     }
+                    &:hover{
+                        .menu-dropdown{
+                            opacity: 1;
+                            display: flex;
+                        }
+                    }
                 }
 
                 &-dropdown{
                     width: 200px;
                     position: absolute;
-                    display: flex;
+                    display: none;
                     flex-direction: column;
                     background: white;
                     padding: 10px 20px;
@@ -73,6 +79,8 @@
                     box-shadow: 3px 4px 5px 0 $text-black-light;
                     left: -50%;
                     top: 20px;
+                    opacity: 0;
+                    transition: 0.3s;
                     a{
                         color: $text-black-light;
                         transition: 1s;
@@ -81,6 +89,134 @@
                         }
                     } 
                 }
+            }
+        }
+        &__mobile {
+            &__wrapper {
+                display: none;
+                align-items: center;
+                padding: 10px 16px;
+            }
+            &__logo {
+                width: 50px;
+                img {
+                    @extend %img-cover;
+                }
+            }
+            &__call {
+                display: flex;
+                white-space: nowrap;
+                align-items: center;
+                margin-left: auto;
+                margin-right: 32px;
+                gap: 16px;
+                font-size: 12px;
+                img {
+                    width: 30px;
+                    border-radius: 50%;
+                }
+            }
+            &__menu {
+                width: 28px;
+                cursor: pointer;
+            }
+    
+            &__link{
+                padding: 8px 0;
+            }
+    
+            &__modal {
+                display: none;
+                position: absolute;
+                left: -10000px;
+                top: 0;
+                background-color: white;
+                display: flex;
+                opacity: 0;
+                transition: 0.2s;
+                z-index: 999;
+                &__logo {
+                    padding: 0 50px;
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    img {
+                        height: 60px;
+                    }
+                }
+                &__close {
+                    display: none;
+                    position: fixed;
+                    top: 20px;
+                    right: 20px;
+                    cursor: pointer;
+                    transition: 0.25s;
+                    svg {
+                        width: 30px;
+                        height: 30px;
+                        fill: #d3222b;
+                        transform: scale(1.8);
+                    }
+                    &.is-show {
+                        display: flex;
+                        pointer-events: all;
+                    }
+                }
+            }
+    
+            &__items {
+                padding: 0 8px;
+                margin: 0;
+                width: 100%;
+            }
+            &__item {
+                min-height: 60px;
+                line-height: 60px;
+                border-bottom: 1px solid #ececec;
+                display: flex;
+                flex-direction: column;
+                a {
+                    text-decoration: none;
+                    padding: 8px 0;
+                    display: block;
+                    color: $text-black;
+                    width: 100%;
+                    font-size: 16px;
+                    font-family: $font-primary;
+                    transition: all 0.3s ease;
+                }
+                &:hover {
+                    & > a, .cec92063641b1475a94e0154fc3e918a8__mobile__link{
+                        color: $text-hover;
+                    }
+                }
+            }
+            &__submenu {
+                list-style: none;
+                flex-direction: column;
+                height: 0px;
+                line-height: 1.6;
+                overflow: hidden;
+                margin-left: 10px;
+                margin-bottom: 0;
+                padding-left: 20px;
+                border-left: 1px solid #ececec;
+                transition: all 0.2s;
+                &__item{
+                    a{
+                        transition: 0.2s;
+                        width: 100%;
+                        &:hover{
+                            color: $text-hover;
+                        }
+                    }
+                }
+            }
+            &__modal.is-show {
+                display: flex;
+                left: 0;
+                right: 0;
+                opacity: 1;
             }
         }
 }

@@ -11,3 +11,11 @@ $white: #fff;
 
 $fontPrimary: "Montserrat",sans-serif;
 $wrapper: 1920px;
+$text-black: #333;
+$text-hover: red;
+$font-primary: "Montserrat", sans-serif;
+%img-cover {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
